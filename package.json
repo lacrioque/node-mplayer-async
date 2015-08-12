@@ -1,15 +1,15 @@
 {
-  "name": "node-mplayer",
-  "version": "0.0.3",
+  "name": "node-mplayer-async",
+  "version": "0.0.1",
   "description": "Node.js wrapper for mplayer on linux.",
-  "main": "./lib/node-mplayer.js",
+  "main": "./lib/node-mplayer-async.js",
   "repository": {
   	"type": "git",
-  	"url": "https://github.com/loics2/node-mplayer.git"
+  	"url": "https://github.com/lacrioque/node-mplayer-async.git
   },
   "keywords":[
   	"mplayer", "wrapper"
   ],
-  "author": "Loïc Stankovic",
+  "author": "Markus Flür",
   "license": "MIT"
 }

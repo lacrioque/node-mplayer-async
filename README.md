@@ -1,17 +1,18 @@
-node-mplayer
-============
+node-mplayer-async
+==================
 
 A node.js wrapper for MPlayer on Linux. It's currently focused on sound playing, more options and video playing will come later.
+Promises rely on the great q library
 
 ##Usage
 
 First, install the module with (assuming you already installed MPlayer)
 
-	npm install node-mplayer
+	npm install node-mplayer-async
 
 Then, you need to make a new instance of the module. The constructor of the module can take the path of the file to play. 
 
-	var Mplayer = require('node-mplayer'); 
+	var Mplayer = require('node-mplayer-async'); 
     
 	var player1 = new Mplayer('/home/node/Music/Kalimba.mp3');
     var player2 = new Mplayer();
@@ -79,18 +80,30 @@ This one is used to set the file to play. The changes will take effect after cal
 
 ###getTimeLength
 
-Returns the length of the file in seconds. It needs a callback.
+Returns the length of the file in seconds. Returns a promise
 
-	player.getTimeLength(function(length){
-    	console.log(length);
-    });
+	player.getTimeLength()
+    .then(function(length){
+        console.log(length);
+    }
 
 ###getTimePosition
 
 Returns the elapsed play time in seconds. It needs a callback.
 
-	player.getTimePosition(function(elapsedTime){
-    	console.log(elapsedTime);
+	player.getTimePosition()
+    .then(function(length){
+        console.log(length);
+    }
+
+###getMetaData
+
+Return metadata of the file that is played in the for of an object.
+{artist: "Some Artist", title: "Some Title", album: "Some Album"}
+
+    getMetaData()
+    .then(function(metaData){
+        console.log(metaData);
     });
 
 ##Events

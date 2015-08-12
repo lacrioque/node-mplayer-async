@@ -5,7 +5,7 @@
   "main": "./lib/node-mplayer-async.js",
   "repository": {
   	"type": "git",
-  	"url": "https://github.com/lacrioque/node-mplayer-async.git
+  	"url": "https://github.com/lacrioque/node-mplayer-async.git"
   },
   "keywords":[
   	"mplayer", "wrapper"
